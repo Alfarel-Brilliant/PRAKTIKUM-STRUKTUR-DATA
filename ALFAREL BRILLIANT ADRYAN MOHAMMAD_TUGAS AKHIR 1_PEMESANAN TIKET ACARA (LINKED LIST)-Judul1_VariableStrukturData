@@ -1,0 +1,188 @@
+class Node:
+    def __init__(self, tiket):
+        self.tiket = tiket
+        self.next = None
+
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def tambah_pemesanan(self, tiket):
+        new_node = Node(tiket)
+
+        if self.head is None:
+            self.head = new_node
+        else:
+            temp = self.head
+            while temp.next:
+                temp = temp.next
+            temp.next = new_node
+
+        print(f"\nPemesanan tiket atas nama '{tiket['nama']}' untuk acara '{tiket['acara']}' berhasil ditambahkan.")
+
+    def tampilkan_pemesanan(self):
+        if self.head is None:
+            print("Belum ada pemesanan tiket.")
+            return
+
+        print("DAFTAR PEMESANAN TIKET ACARA")
+        temp = self.head
+        no = 1
+        while temp:
+            print(f"\nNo. {no}")
+            print(f"Nama Pemesan : {temp.tiket['nama']}")
+            print(f"Nama Acara   : {temp.tiket['acara']}")
+            print(f"Jumlah Tiket : {temp.tiket['jumlah']}")
+            print(f"Kategori     : {temp.tiket['kategori']}")
+            print(f"Total Harga  : Rp{temp.tiket['total']:,.0f}")
+            temp = temp.next
+            no += 1
+
+    def proses_pemesanan(self):
+        if self.head is None:
+            print("Tidak ada pemesanan tiket yang menunggu.")
+        else:
+            t = self.head.tiket
+            print(f"\nMemproses pemesanan tiket atas nama '{t['nama']}' untuk acara '{t['acara']}'...")
+            print("Tiket berhasil diproses dan dikirimkan ke pemesan.")
+            self.head = self.head.next
+
+    def batalkan_pemesanan(self, nama):
+        if self.head is None:
+            print("Tidak ada pemesanan yang bisa dibatalkan.")
+            return
+
+        if self.head.tiket['nama'].lower() == nama.lower():
+            print(f"\nPemesanan atas nama '{self.head.tiket['nama']}' berhasil dibatalkan.")
+            self.head = self.head.next
+            return
+
+        temp = self.head
+        while temp.next:
+            if temp.next.tiket['nama'].lower() == nama.lower():
+                print(f"\nPemesanan atas nama '{temp.next.tiket['nama']}' berhasil dibatalkan.")
+                temp.next = temp.next.next
+                return
+            temp = temp.next
+
+        print(f"Pemesanan atas nama '{nama}' tidak ditemukan.")
+
+    def cari_pemesanan(self, nama):
+        if self.head is None:
+            print("Belum ada pemesanan tiket.")
+            return
+
+        temp = self.head
+        ditemukan = False
+        while temp:
+            if temp.tiket['nama'].lower() == nama.lower():
+                t = temp.tiket
+                print(f"\n{'-' * 50}")
+                print(f"Hasil Pencarian: '{nama}'")
+                print(f"{'=' * 50}")
+                print(f"  Nama Pemesan : {t['nama']}")
+                print(f"  Nama Acara   : {t['acara']}")
+                print(f"  Jumlah Tiket : {t['jumlah']}")
+                print(f"  Kategori     : {t['kategori']}")
+                print(f"  Total Harga  : Rp{t['total']:,.0f}")
+                print(f"{'-' * 50}")
+                ditemukan = True
+                break
+            temp = temp.next
+
+        if not ditemukan:
+            print(f"Pemesanan atas nama '{nama}' tidak ditemukan.")
+
+
+HARGA_KATEGORI = {
+    "VIP": 10_000_000,
+    "REGULER": 5_000_000,
+    "EKONOMI": 2_000_000
+}
+
+
+def input_pemesanan():
+    print("\nInput Pemesanan Tiket")
+    nama  = input("Nama Pemesan     : ").strip()
+    acara = input("Nama Acara       : ").strip()
+
+    print("Kategori Tiket   : (1) VIP - Rp10.000.000  |  (2) Reguler - Rp5.000.000  |  (3) Ekonomi - Rp2.000.000")
+    pilihan_kat = input("Pilih Kategori   : ").strip()
+
+    kategori_map = {"1": "VIP", "2": "REGULER", "3": "EKONOMI"}
+    kategori = kategori_map.get(pilihan_kat)
+    if not kategori:
+        print("Kategori tidak valid!")
+        return None
+
+    try:
+        jumlah = int(input("Jumlah Tiket     : "))
+        if jumlah <= 0:
+            print("Jumlah tiket harus lebih dari 0!")
+            return None
+    except ValueError:
+        print("Jumlah tiket harus berupa angka!")
+        return None
+
+    total = jumlah * HARGA_KATEGORI[kategori]
+    return {
+        "nama": nama,
+        "acara": acara,
+        "jumlah": jumlah,
+        "kategori": kategori,
+        "total": total
+    }
+
+
+def menu():
+    print("\nSISTEM PEMESANAN TIKET ACARA")
+    print("1. Tambah pemesanan tiket")
+    print("2. Tampilkan Semua pemesanan")
+    print("3. Proses pemesanan pertama")
+    print("4. Cari pemesanan")
+    print("5. Batalkan pemesanan")
+    print("6. Keluar")
+
+
+def main():
+    daftar = LinkedList()
+
+    while True:
+        menu()
+        try:
+            pilihan = int(input("Pilih menu: "))
+        except ValueError:
+            print("Input harus angka!")
+            continue
+
+        if pilihan == 1:
+            tiket = input_pemesanan()
+            if tiket:
+                daftar.tambah_pemesanan(tiket)
+
+        elif pilihan == 2:
+            daftar.tampilkan_pemesanan()
+
+        elif pilihan == 3:
+            daftar.proses_pemesanan()
+
+        elif pilihan == 4:
+            nama = input("Masukkan nama pemesan yang dicari: ").strip()
+            daftar.cari_pemesanan(nama)
+
+        elif pilihan == 5:
+            nama = input("Masukkan nama pemesan yang ingin dibatalkan: ").strip()
+            daftar.batalkan_pemesanan(nama)
+
+        elif pilihan == 6:
+            print("\nTerima kasih telah menggunakan Sistem Pemesanan Tiket Acara.")
+            print("Program selesai.")
+            break
+
+        else:
+            print("Pilihan tidak valid!")
+
+
+if __name__ == "__main__":
+    main()
