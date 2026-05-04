@@ -69,101 +69,56 @@ Kodingan sederhana berbasis python yang mengurutkan nama-nama hewan kebun binata
 26. print() = Berfungsi untuk mencetak baris kosong sehingga output berpindah ke baris baru setelah semua nama hewan ditampilkan.
 
 27. if __name__ == "__main__": = Berfungsi untuk memastikan bahwa fungsi main hanya akan dijalankan jika file ini dieksekusi secara langsung, bukan ketika diimpor sebagai modul oleh file lain.
+
 28. main() = Berfungsi untuk memanggil dan menjalankan fungsi main sehingga seluruh program dapat berjalan.
 
 ---
 
 # OUTPUT KODE
-<img width="728" height="685" alt="Image" src="https://github.com/user-attachments/assets/49f838a6-7e7a-4c8a-8f9e-da372ddcd4e8" /><img width="728" height="685" alt="Image" src="https://github.com/user-attachments/assets/49f838a6-7e7a-4c8a-8f9e-da372ddcd4e8" />
+<img width="812" height="237" alt="Image" src="https://github.com/user-attachments/assets/10bf477a-1d14-4e6f-9a44-1ffcf528142a" />
+
 ---
+
 # PENJELASAN OUTPUT
 
----
 
-# Output 1 - Judul Program:
+1. Input Data:
 
-Penamaan Hewan di Kebun Binatang
+Program meminta pengguna untuk memasukkan jumlah hewan yang ada di kebun binatang.
 
-= Berfungsi sebagai judul program yang muncul pertama kali saat program dijalankan.
+Kemudian, pengguna memasukkan nama-nama hewan satu per satu sebanyak 7 hewan:
 
----
+Ayam
 
-# Output 2 - Daftar Hewan Tersedia:
+Bebek
 
-Hewan tersedia:
-   1. Ayam
-   2. Babi
-   3. Kucing
-   4. Macan
-   5. Gajah
-   6. Harimau
-   7. Kelinci
-   8. Buaya
-   9. Gorila
-  10. Burung
-  11. Singa
-  12. Rusa
+Buaya
 
-= Berfungsi sebagai **daftar referensi 12 nama hewan** yang ditampilkan agar pengguna bisa memilih atau mengetik nama hewan yang ingin diurutkan.
+Zebra
 
----
+Harimau
+
+Macan
+
+Panda
 
 
-# Output 3 - Input Jumlah Hewan:
+2. Daftar Hewan Sebelum Diurutkan:
 
-Masukkan jumlah hewan yang ingin diurutkan: 6
+Setelah nama-nama hewan dimasukkan, program menampilkan daftar hewan sebelum dilakukan pengurutan:
 
-= Berfungsi sebagai **permintaan input angka** dari pengguna. Pengguna memasukkan angka 6, artinya akan ada 6 hewan yang diurutkan.
-
----
-
----
-# Output 4 - Input Nama Hewan
-
-Hewan ke-1: ZEBRA
-Hewan ke-2: GORILLA
-Hewan ke-3: BURUNG
-Hewan ke-4: AYAM
-Hewan ke-5: SINGA
-Hewan ke-6: (kosong)
-Nama tidak boleh kosong, coba lagi!
-Hewan ke-6: KELINCI
-
-
-= Berfungsi sebagai permintaan input nama hewan satu per satu. Pada hewan ke-6 pengguna tidak mengetik apapun sehingga program menampilkan pesan "Nama tidak boleh kosong, coba lagi! lalu meminta input ulang, dan pengguna memasukkan KELINCI.
-
----
+[Ayam, Bebek, Buaya, Zebra, Harimau,Macan,Panda]
 
 
 
-# Output 5 - Array Sebelum Diurutkan:  ['Zebra', 'Gorilla', 'Burung', 'Ayam', 'Singa', 'Kelinci']
+3. Daftar Hewan Setelah Diurutkan (Bubble Sort):
 
-= Berfungsi sebagai **tampilan kondisi awal list** sebelum Bubble Sort dijalankan, yaitu urutan sesuai yang diketik pengguna.
+Program kemudian mengurutkan daftar nama hewan menggunakan algoritma Bubble Sort. Algoritma ini mengurutkan data secara bertahap, memindahkan elemen yang lebih besar ke posisi yang lebih tinggi.
 
----
+Hasil pengurutan dengan algoritma Bubble Sort menghasilkan daftar:
 
-# Output 6 - Array Sesudah Diurutkan: ['Ayam Burung Gorilla Kelinci Singa Zebra']
+[Bebek Buaya Harimau Macan Panda Zebra]
 
-= Berfungsi sebagai hasil akhir setelah Bubble Sort selesai bekerja, semua nama hewan sudah tersusun dari A ke Z .
-
----
-
-# Output 7 - Daftar Bernomor:
-
-Daftar hewan terurut A → Z:
-  1. Ayam
-  2. Burung
-  3. Gorilla
-  4. Kelinci
-  5. Singa
-  6. Zebra
-
-= Berfungsi sebagai tampilan hasil akhir yang bernomor urut, menampilkan 6 nama hewan yang sudah terurut dengan rapi dari A hingga Z.
-
----
-
-# Output 8 - Penutup:
-Sorting selesai!
-= Berfungsi sebagai tanda bahwa seluruh proses program telah selesai dijalankan dengan sukses.
+Dan output terakhir selesai
 
 ---
