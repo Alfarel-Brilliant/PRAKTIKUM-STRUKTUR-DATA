@@ -10,10 +10,9 @@ Kodingan sederhana berbasis python yang mengurutkan nama-nama hewan kebun binata
 ---
 
 # C.SOURCE CODE
-<img width="955" height="974" alt="Image" src="https://github.com/user-attachments/assets/5018bce7-2f95-4ae3-bd43-2866a2f01ff4" />
----
-<img width="589" height="400" alt="Image" src="https://github.com/user-attachments/assets/db2ddfa2-dcfd-41df-86fb-53c966182bea" />
----
+
+<img width="657" height="719" alt="Image" src="https://github.com/user-attachments/assets/9bd9406c-ae88-4c27-a733-5473621475d4" />
+
 
 # PENJELASAN KODE
 
