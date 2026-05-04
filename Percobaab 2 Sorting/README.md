@@ -107,7 +107,7 @@ Panda
 
 Setelah nama-nama hewan dimasukkan, program menampilkan daftar hewan sebelum dilakukan pengurutan:
 
-[Ayam, Bebek, Buaya, Zebra, Harimau,Macan,Panda]
+[Ayam, Bebek, Buaya, Zebra, Harimau,Macan,Panda.]
 
 
 
@@ -117,7 +117,7 @@ Program kemudian mengurutkan daftar nama hewan menggunakan algoritma Bubble Sort
 
 Hasil pengurutan dengan algoritma Bubble Sort menghasilkan daftar:
 
-[Bebek Buaya Harimau Macan Panda Zebra]
+[Ayam,Bebek, Buaya, Harimau, Macan, Panda ,Zebra.]
 
 Dan output terakhir selesai
 
