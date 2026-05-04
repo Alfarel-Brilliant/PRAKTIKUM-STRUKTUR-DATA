@@ -1,70 +1,35 @@
+
 def tukar(arr, i, j):
-    "Menukar posisi dua elemen dalam list."
-    temp    = arr[i]  
-    arr[i]  = arr[j]   
-    arr[j]  = temp    
+    temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
 
 
 def bubble_sort(arr, n):
-    "Mengurutkan list secara alfabetis menggunakan Bubble Sort."
-    for i in range(n - 1):            
-        for j in range(n - i - 1):    
-            if arr[j] > arr[j + 1]:    
+    for i in range(n - 1):
+        for j in range(n - i - 1):
+            if arr[j] > arr[j + 1]:
                 tukar(arr, j, j + 1)
 
 
 def main():
-    "Program utama: input, sorting, dan output nama hewan."
-    hewan_tersedia = [
-        "Ayam", "Babi", "Kucing", "Macan",
-        "Gajah", "Harimau", "Kelinci", "Buaya",
-        "Gorila", "Burung", "Singa", "Rusa"
-    ]
-
-    print("Penamaan Hewan di Kebun Binatang")
-    print("\nHewan tersedia:")
-    for idx, nama in enumerate(hewan_tersedia, 1):
-        print(f"  {idx:2}. {nama}")
-
-    print()
     try:
-        n = int(input("Masukkan jumlah hewan yang ingin diurutkan: "))
-        if n <= 0:
-            print("Jumlah harus lebih dari 0!")
-            return
+        n = int(input("Masukkan jumlah hewan di kebun binatang: "))
     except ValueError:
         print("Input tidak valid!")
         return
-
     arr = []
-    print(f"\nMasukkan {n} nama hewan (ketik bebas atau pilih dari daftar):")
+    print("Masukkan nama hewan:")
     for i in range(n):
-        while True:
-            nama = input(f"  Hewan ke-{i + 1}: ").strip().title()
-            if nama == "":
-                print("  Nama tidak boleh kosong, coba lagi!")
-            else:
-                arr.append(nama)
-                break
-
-    print(f"Array SEBELUM diurutkan: {arr}")
-
+        nama = input()
+        arr.append(nama)
+    print(f"Daftar hewan sebelum diurutkan: {arr}")
     bubble_sort(arr, n)
-
-    print("Array SESUDAH diurutkan (Bubble Sort):", end=" ")
+    print("Daftar hewan setelah diurutkan (Bubble Sort):", end=" ")
     for i in range(n):
         print(arr[i], end=" ")
     print()
 
-    print("\nDaftar hewan terurut A → Z:")
-    for i in range(n):
-        print(f"  {i + 1}. {arr[i]}")
-    print("  Sorting selesai!")
-    print("=" * 50)
-
 
 if __name__ == "__main__":
     main()
-
-
-
