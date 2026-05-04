@@ -17,26 +17,60 @@ Kodingan sederhana berbasis python yang mengurutkan nama-nama hewan kebun binata
 
 # PENJELASAN KODE
 
-def tukar(arr, i, j):
-= Berfungsi sebagai fungsi untuk *menukar posisi dua elemen* di dalam list. Fungsi ini menggunakan variabel sementara temp untuk menyimpan nilai sementara agar nilai asli tidak hilang saat proses penukaran berlangsung.
+1. def tukar(arr, i, j): = Berfungsi sebagai fungsi untuk menukar posisi dua elemen di dalam list.
 
-def bubble_sort(arr, n):
-= Berfungsi sebagai fungsi *inti algoritma Bubble Sort* yang mengurutkan elemen-elemen di dalam list. Fungsi ini menggunakan dua loop bersarang untuk membandingkan setiap pasangan elemen yang bersebelahan, lalu memanggil fungsi tukar() apabila urutan elemen tersebut salah.
+2. temp = arr[i] = Berfungsi untuk menyimpan nilai elemen pada indeks i ke dalam variabel sementara bernama temp.
 
-for i in range(n - 1):
-= Berfungsi sebagai *loop luar* yang mengontrol jumlah putaran (pass). Setiap satu putaran memastikan satu elemen terbesar berpindah ke posisi akhir yang benar.
+3. arr[i] = arr[j] = Berfungsi untuk mengisi posisi indeks i dengan nilai yang ada di indeks j.
 
-for j in range(n - i - 1):
-= Berfungsi sebagai *loop dalam* yang membandingkan dua elemen yang bersebelahan. Batasnya semakin kecil setiap putaran karena elemen di bagian akhir sudah pasti terurut.
+4. arr[j] = temp = Berfungsi untuk mengisi posisi indeks j dengan nilai yang sebelumnya disimpan di variabel temp, sehingga proses penukaran selesai.
 
-if arr[j] > arr[j + 1]:
-= Berfungsi sebagai kondisi pengecekan* apakah elemen kiri lebih besar dari elemen kanan. Jika ya, maka fungsi tukar() dipanggil untuk memindahkan elemen tersebut.
+5. def bubble_sort(arr, n): = Berfungsi sebagai fungsi inti algoritma Bubble Sort yang mengurutkan elemen-elemen di dalam list.
 
-def main():
-= Berfungsi sebagai fungsi utama yang mengatur seluruh alur program, mulai dari menerima input jumlah dan nama hewan, memanggil fungsi bubble_sort(), hingga menampilkan hasil urutan akhir ke layar.
+6. for i in range(n - 1): = Berfungsi sebagai perulangan luar yang berjalan sebanyak n-1 kali, mewakili setiap putaran (pass) dari proses pengurutan.
 
-if __name__ == "__main__":
-= Berfungsi sebagai penjaga eksekusi program, memastikan fungsi main() hanya dijalankan ketika file ini dijalankan secara langsung, bukan ketika di-import oleh file Python lain.
+7. for j in range(n - i - 1): = Berfungsi sebagai perulangan dalam yang membandingkan elemen-elemen berdekatan, dengan batas yang semakin mengecil setiap putaran karena elemen terbesar sudah berada di posisi akhir.
+
+8. if arr[j] > arr[j + 1]: = Berfungsi untuk memeriksa apakah elemen pada posisi j lebih besar dari elemen pada posisi j+1, jika iya maka akan dilakukan penukaran posisi.
+
+9. tukar(arr, j, j + 1) = Berfungsi untuk memanggil fungsi tukar guna menukar posisi elemen pada indeks j dengan elemen pada indeks j+1.
+
+10. def main(): = Berfungsi sebagai fungsi utama yang menjalankan keseluruhan program dari awal hingga akhir.
+
+11. try: = Berfungsi untuk memulai blok percobaan yang akan menangkap kesalahan jika input yang dimasukkan pengguna tidak sesuai.
+
+12. n = int(input("Masukkan jumlah hewan di kebun binatang: ")) = Berfungsi untuk meminta pengguna memasukkan jumlah hewan dan mengubah input tersebut menjadi bilangan bulat yang disimpan di variabel n.
+
+13. except ValueError: = Berfungsi untuk menangkap kesalahan apabila pengguna memasukkan input yang bukan angka.
+
+14. print("Input tidak valid!") = Berfungsi untuk menampilkan pesan kesalahan kepada pengguna bahwa input yang dimasukkan tidak valid.
+
+15. return = Berfungsi untuk menghentikan eksekusi fungsi main secara langsung saat terjadi kesalahan input.
+
+16. arr = [] = Berfungsi untuk membuat sebuah list kosong yang nantinya akan diisi dengan nama-nama hewan.
+
+17. print("Masukkan nama hewan:") = Berfungsi untuk menampilkan perintah kepada pengguna agar memasukkan nama hewan satu per satu.
+
+18. for i in range(n): = Berfungsi sebagai perulangan yang berjalan sebanyak n kali sesuai jumlah hewan yang diinputkan sebelumnya.
+
+19. nama = input() = Berfungsi untuk menerima input nama hewan dari pengguna dan menyimpannya ke dalam variabel nama.
+
+20. arr.append(nama) = Berfungsi untuk menambahkan nama hewan yang baru dimasukkan ke dalam list arr.
+
+21. print(f"Daftar hewan sebelum diurutkan: {arr}") = Berfungsi untuk menampilkan seluruh isi list sebelum proses pengurutan dilakukan.
+
+22. bubble_sort(arr, n) = Berfungsi untuk memanggil fungsi bubble_sort guna mengurutkan elemen-elemen di dalam list arr.
+
+23. print("Daftar hewan setelah diurutkan (Bubble Sort):", end=" ") = Berfungsi untuk menampilkan teks judul hasil pengurutan tanpa berpindah ke baris baru.
+
+24. for i in range(n): = Berfungsi sebagai perulangan untuk mencetak setiap elemen yang sudah diurutkan satu per satu.
+
+25. print(arr[i], end=" ") = Berfungsi untuk mencetak nama hewan pada indeks i dengan spasi sebagai pemisah antar nama tanpa berpindah baris.
+
+26. print() = Berfungsi untuk mencetak baris kosong sehingga output berpindah ke baris baru setelah semua nama hewan ditampilkan.
+
+27. if __name__ == "__main__": = Berfungsi untuk memastikan bahwa fungsi main hanya akan dijalankan jika file ini dieksekusi secara langsung, bukan ketika diimpor sebagai modul oleh file lain.
+28. main() = Berfungsi untuk memanggil dan menjalankan fungsi main sehingga seluruh program dapat berjalan.
 
 ---
 
