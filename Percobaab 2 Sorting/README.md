@@ -103,7 +103,7 @@ Macan
 Panda
 
 
-2. Daftar Hewan Sebelum Diurutkan:
+2. Daftar hewan sebelum diurutkan:
 
 Setelah nama-nama hewan dimasukkan, program menampilkan daftar hewan sebelum dilakukan pengurutan:
 
@@ -111,7 +111,7 @@ Setelah nama-nama hewan dimasukkan, program menampilkan daftar hewan sebelum dil
 
 
 
-3. Daftar Hewan Setelah Diurutkan (Bubble Sort):
+3. Daftar hewan setelah diurutkan:
 
 Program kemudian mengurutkan daftar nama hewan menggunakan algoritma Bubble Sort. Algoritma ini mengurutkan data secara bertahap, memindahkan elemen yang lebih besar ke posisi yang lebih tinggi.
 
