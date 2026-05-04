@@ -122,3 +122,5 @@ Hasil pengurutan dengan algoritma Bubble Sort menghasilkan daftar:
 Dan output terakhir selesai
 
 ---
+
+LINK YOUTUBE : https://youtu.be/2LP7fRbzL-Y
