@@ -96,7 +96,6 @@ Menjalankan fungsi utama program untuk memulai proses pencarian nomor kursi.
 
 # Output dari Source Code
 
-Jika nomor kursi ditemukan, program akan mencetak indeks nomor kursi tersebut dalam daftar. Contohnya, jika daftar nomor kursi adalah sepuluh dua puluh tiga puluh empat puluh lima puluh dan nomor kursi yang dicari adalah tiga puluh, outputnya adalah Median dua nomor kursi tiga puluh dan Nomor kursi ditemukan pada indeks ke dua. Jika nomor kursi tidak ditemukan, program akan mencetak pesan bahwa nomor kursi tidak ditemukan. Contohnya, jika daftar nomor kursi adalah sepuluh dua puluh tiga puluh empat puluh lima puluh dan nomor kursi yang dicari adalah tiga puluh lima, outputnya adalah Median dua nomor kursi tiga puluh, Mencari nomor kursi di kanan, Median tiga nomor kursi empat puluh, Mencari nomor kursi di kiri, dan Nomor kursi tidak ditemukan.
 
 
 
