@@ -5,7 +5,15 @@ Pencarian Nomor Kursi Pesawat Menggunakan Binary Search
 
 # Deskripsi Singkat
 
-Program ini digunakan untuk mencari nomor kursi tertentu dalam daftar nomor kursi pesawat yang sudah diurutkan secara menaik. Algoritma yang digunakan adalah Binary Search, yaitu algoritma pencarian yang bekerja dengan membagi array menjadi dua bagian pada setiap iterasi. Binary Search memiliki kompleksitas waktu yang efisien, yaitu O(log n). Program ini meminta pengguna untuk memasukkan jumlah nomor kursi, daftar nomor kursi yang sudah diurutkan, dan nomor kursi yang ingin dicari. Jika nomor kursi ditemukan, program akan mengembalikan indeksnya. Jika tidak ditemukan, program akan memberikan pesan bahwa nomor kursi tidak ditemukan.
+Program ini digunakan untuk mencari nomor kursi tertentu dalam daftar nomor kursi pesawat yang sudah diurutkan secara menaik. Algoritma yang digunakan adalah Binary Search, yaitu algoritma pencarian yang bekerja dengan membagi array menjadi dua bagian pada setiap iterasi.
+
+Binary Search memiliki kompleksitas waktu yang efisien, yaitu O(log n). Program ini meminta pengguna untuk memasukkan jumlah nomor kursi, daftar nomor kursi yang sudah diurutkan, dan nomor kursi yang ingin dicari. Jika nomor kursi ditemukan, program akan mengembalikan indeksnya. Jika tidak ditemukan, program akan memberikan pesan bahwa nomor kursi tidak ditemukan.
+
+# SUMBER KODE
+SCREENSHOT 
+
+<img width="1186" height="1051" alt="Image" src="https://github.com/user-attachments/assets/ad101d65-837b-454f-9eef-1ebfccfec75c" />
+
 
 
 # Output dari Source Code
