@@ -100,4 +100,3 @@ Jika nomor kursi ditemukan, program akan mencetak indeks nomor kursi tersebut da
 
 
 
-Memastikan bahwa fungsi main hanya dijalankan jika file ini dijalankan sebagai program utama, bukan diimpor sebagai modul
