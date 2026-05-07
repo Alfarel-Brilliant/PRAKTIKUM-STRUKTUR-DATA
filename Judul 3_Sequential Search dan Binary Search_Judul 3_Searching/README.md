@@ -129,3 +129,7 @@ Program menampilkan bahwa nomor kursi ditemukan pada indeks ke-1 (indeks dimulai
 Indeks ke-1 berarti posisi kedua dalam daftar
 
 
+
+## LINK YOUTUBE
+https://youtu.be/NMQsJFY6PB8https://youtu.be/https://youtu.be/NMQsJFY6PB8
+
