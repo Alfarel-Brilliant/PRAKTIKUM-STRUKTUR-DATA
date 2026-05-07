@@ -97,6 +97,35 @@ Menjalankan fungsi utama program untuk memulai proses pencarian nomor kursi.
 # Output dari Source Code
 <img width="515" height="296" alt="image" src="https://github.com/user-attachments/assets/f33353e7-8962-42d7-b6e8-8ff66427aeb8" />
 
+# Penjelasan Output
+Gambar tersebut menunjukkan output dari sebuah program yang melakukan pencarian nomor kursi pesawat menggunakan metode Binary search  pada daftar nomor kursi yang sudah diurutkan secara menaik.
 
+# Berikut penjelasan langkah-langkah output tersebut:
+
+# Input Jumlah Kursi dan Nomor Kursi:
+Program meminta pengguna memasukkan jumlah kursi pesawat, yaitu 8.
+
+Kemudian pengguna memasukkan nomor kursi secara berurutan menaik: 10, 20, 30, 40, 50, 60, 70, 80.
+
+# Menampilkan Daftar Nomor Kursi:
+Program menampilkan daftar nomor kursi yang sudah dimasukkan: [10, 20, 30, 40, 50, 60, 70, 80].
+
+# Memasukkan Nomor Kursi yang Dicari:
+Pengguna memasukkan nomor kursi yang ingin dicari, yaitu 20.
+
+# Proses Pencarian Median:
+Program menggunakan metode median untuk mencari nomor kursi.
+
+Median pertama yang diperiksa adalah 40 (nilai tengah dari daftar).
+
+Karena 20 lebih kecil dari 40, pencarian dilanjutkan ke bagian kiri daftar.
+
+Median berikutnya di bagian kiri adalah 20.
+Karena 20 sama dengan nomor yang dicari, pencarian berhasil.
+
+Output Hasil Pencarian:
+Program menampilkan bahwa nomor kursi ditemukan pada indeks ke-1 (indeks dimulai dari 0).
+
+Indeks ke-1 berarti posisi kedua dalam daftar
 
 
