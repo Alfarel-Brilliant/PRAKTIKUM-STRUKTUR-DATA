@@ -1,6 +1,6 @@
 # Judul Program
 
-Pencarian Nomor Kursi Pesawat Menggunakan Binary Search
+Pencarian nomor kursi pesawat menggunakan Binary Search
 
 
 # Deskripsi Singkat
@@ -95,6 +95,7 @@ main()
 Menjalankan fungsi utama program untuk memulai proses pencarian nomor kursi.
 
 # Output dari Source Code
+<img width="515" height="296" alt="image" src="https://github.com/user-attachments/assets/f33353e7-8962-42d7-b6e8-8ff66427aeb8" />
 
 
 
